@@ -7,7 +7,7 @@ const vehiculos = [
         "img": "https://dercocenter-api.s3.us-east-1.amazonaws.com/images/models/1682716203-JkRG8FACQ3.webp",
         "modelo": "Nuevo S-presso",
         "precio": "8.040.000",
-        "cantidad": 35
+        "cantidad": 35,
     },
     {
         "id": 1,

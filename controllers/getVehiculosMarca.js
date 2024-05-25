@@ -1,24 +1,22 @@
-const { vehiculos } = require("../vehiculos");
-const { request , response } = require("express");
+const { vehiculos } = require("../vehiculos")
+const { request , response } = require("express")
 
 const getVehiculosMarca = (req = request , res = response) => {
-    let marca = req.params.marca;
+    let marca = req.params.marca
 
-    let vehFiltrados = vehiculos.filter((vehiculo) => {
-        return vehiculo.marca === marca;
-    })
+    let vehFiltrados = vehiculos.filter( vehiculo => vehiculo.marca === marca)
 
-    if(vehFiltrados){
+    if(vehFiltrados.length > 0){
         return res.json({
             ok:true,
-            vehFiltrados,
-            statusCode:200
+            statusCode:200,
+            vehFiltrados
         })
     }else{
         return res.json({
             ok:false,
-            msg:"No hay vehiculos con ese ID",
-            statusCode:404
+            statusCode:404,
+            msg:"No hay vehiculos con esa marca"
         })
     }
 }

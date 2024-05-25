@@ -4,8 +4,8 @@ const { request , response } = require("express");
 const getVehiculos = (req = request , res = response) => {
     return res.json({
         ok:true,
-        vehiculos,
-        statusCode:200
+        statusCode:200,
+        vehiculos
     })
 }
 
